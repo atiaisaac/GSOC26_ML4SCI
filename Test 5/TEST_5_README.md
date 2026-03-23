@@ -43,15 +43,10 @@ Given the significant class imbalance in the dataset (gravitational lenses are t
 
 # Observation
 
-The combination of weighted sampling and focal loss somewhat addresses the class imbalance problem. The model achieves  performance on the minority class (gravitational lenses), with both high recall and precision. The balanced approach ensures that:
-
-1. The model learns robust features for both lens and non-lens images
-2. False positives are minimized while maintaining high true positive rate
-3. The AUC-ROC metric consistently improves throughout training, indicating balanced improvement across classification thresholds
+The combination of weighted sampling and focal loss somewhat addresses the class imbalance problem partially. The model achieves moderate performance on the minority class (gravitational lenses), as evidenced by its high recall. The precision however, points to a different interpretation that, the model often misclassifies negative samples as positive.
 
 # Recommendation
-
-The current approach (weighted sampling + focal loss + stratified splitting) handles class imbalance for this binary classification task to some degree as evidenced by the high recall but low precision values for the minority class. 
+ 
 For future improvements, consider:
 1. Ensemble methods combining multiple ResNet variants
 2. Minority sample generation using GAN
